@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Advanced Styling & JavaScript Project</title>
+
+<!-- CSS FILE -->
+<link rel="stylesheet" href="apextask3.css" />
+
+</head>
+<body>
+
+<div class="container">
+  <!-- HERO -->
+  <div class="hero" role="banner">
+    <h1>Advanced Styling & JavaScript</h1>
+    <p class="kicker">Responsive · Quiz · Carousel · API Fetch</p>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs" id="tabs">
+    <button class="tab-btn active" data-target="card-media" type="button">Media Queries</button>
+    <button class="tab-btn" data-target="card-quiz" type="button">Quiz</button>
+    <button class="tab-btn" data-target="card-carousel" type="button">Image Carousel</button>
+    <button class="tab-btn" data-target="card-api" type="button">Fetch API</button>
+  </div>
+
+  <!-- PANES -->
+  <div class="card" id="card-media">
+    <h2>Responsive Design Using Media Queries</h2>
+    <p class="kicker">Resize the window to see the layout adapt.</p>
+    <div class="grid">
+      <div class="grid-item">Box 1</div>
+      <div class="grid-item">Box 2</div>
+      <div class="grid-item">Box 3</div>
+      <div class="grid-item">Box 4</div>
+    </div>
+  </div>
+
+  <div class="card" id="card-quiz" style="display:none;">
+    <h2>Interactive Quiz</h2>
+    <div id="question">Question coming...</div>
+    <div id="answers"></div>
+    <div class="center" style="margin-top:12px">
+      <button id="next" type="button">Next</button>
+      <div id="feedback"></div>
+    </div>
+  </div>
+
+  <div class="card" id="card-carousel" style="display:none;">
+    <h2>Image Carousel</h2>
+    <div class="carousel" id="carousel">
+      <button class="carousel-btn" id="prev">◀</button>
+      <div class="carousel-track" id="track">
+        <img src="img1.png" alt="Slide 1">
+        <img src="https://picsum.photos/seed/a/1200/600" alt="Slide 2">
+        <img src="https://picsum.photos/seed/b/1200/600" alt="Slide 3">
+      </div>
+      <button class="carousel-btn" id="nextBtn">▶</button>
+    </div>
+  </div>
+
+  <div class="card" id="card-api" style="display:none;">
+    <h2>Fetch API</h2>
+    <p class="kicker">Use the buttons to fetch jokes from the API.</p>
+    <div class="api-buttons">
+      <button id="fetchRandom">Random Joke</button>
+      <button id="fetchProgramming">Programming Joke</button>
+      <button id="fetchTen">Random Ten</button>
+      <button id="clearJoke">Clear</button>
+    </div>
+    <div id="joke" class="joke"></div>
+  </div>
+
+</div>
+
+<!-- JS FILE -->
+<script src="apextask3.js"></script>
+
+</body>
+</html>
